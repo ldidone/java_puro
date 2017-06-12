@@ -1,0 +1,21 @@
+package com.kaitzen;
+
+public class Calculadora {
+
+	public String sumar(Integer num, Integer num2){
+		Integer res = num + num2;
+		return "el resultado de la suma es: " + res;
+	}
+	
+	public String restar(Integer num, Integer num2){
+		Integer res = num - num2;
+		return "el resultado de la resta es: " + res;
+	}
+	
+	public String multiplicar(Integer num, Integer num2){
+		for (Integer i = 1, i <= num2, i++){
+			
+		}
+		return "el resultado de la resta es: " + res;
+	}
+}

@@ -1,0 +1,63 @@
+package com.kaitzen;
+
+import java.util.*;
+
+public class Cuenta {
+	private float amount;
+	private String name;
+	private Integer id;
+	private Random RDID = new Random();
+	private static Integer MIN_SEED = 1;
+	private static Integer MAX_SEED = 1000;
+	
+	public Cuenta() {
+		id = getRdId();
+		name = "New account";
+		amount = 0;		
+	}
+	
+	public Integer getId() {
+		return id;
+	}
+	 
+	public float getAmount() {
+		return amount;
+	}
+	
+	public void setAmount(float amount) {
+		this.amount = amount;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	public void setNanme(String name) {
+		this.name = name;
+	}
+	
+
+	public void reintegro(){
+		
+	}
+	
+	public void ingreso(){
+		
+	}
+	
+	public void transferencia(){
+		
+	}
+	
+	public Integer getRdId(){
+		Integer dif;
+		Integer minseed = RDID.nextInt(MIN_SEED);
+		Integer maxseed = RDID.nextInt(MAX_SEED);
+		if (maxseed > minseed){
+			 dif = maxseed - minseed;	
+		} else {
+			dif =  minseed - maxseed;
+		}
+		return RDID.nextInt(dif);
+	}
+}

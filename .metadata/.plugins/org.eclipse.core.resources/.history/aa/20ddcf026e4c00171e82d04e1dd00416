@@ -1,0 +1,20 @@
+package com.kaitzen;
+
+public class Libro {
+	private String name;
+	private String editorial;
+	private Ubicacion ubicacion;
+	private String alumno_resp;
+	
+
+	public void prestamo(){
+		
+	}
+	
+	public void devolucion(){
+		
+	}
+	public String toString(){
+		return "";
+	}
+}

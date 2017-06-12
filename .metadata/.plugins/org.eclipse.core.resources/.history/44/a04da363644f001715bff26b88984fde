@@ -1,0 +1,15 @@
+package com.kaitzen;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "------------ Suma------------" );
+        Calculadora a = new Calculadora();
+        a.sumar(3,2);
+    }
+}

@@ -1,0 +1,10 @@
+package com.kaitzen;
+
+public class Calculadora {
+
+	public String sumar(Integer num, Integer num2){
+		Integer res = num + num2;
+		return "el resultado de la suma es: " + res;
+	}
+	
+}

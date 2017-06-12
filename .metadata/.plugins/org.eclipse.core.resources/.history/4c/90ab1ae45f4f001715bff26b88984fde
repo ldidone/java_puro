@@ -1,0 +1,26 @@
+package com.kaitzen;
+
+public class AppTest {
+	public static void main( String[] args )
+    {
+        System.out.println("---------------- Libro 1 ----------------");
+
+        Libro l1 = new Libro();
+        l1.prestamo("Lucho");
+        System.out.println(l1.toString());
+
+        System.out.println("---------------- Libro 2 ----------------");
+
+        Libro l2 = new Libro("Los Juegos del Hambre", "Patito");
+        System.out.println(l2);
+
+        System.out.println("---------------- Libro 3 ----------------");
+
+        Libro l3 = new Libro("Maze Runner", "Panini");
+        l3.prestamo("Nico");
+        l3.devolucion();
+        System.out.println(l3.toString());
+        l3.setName("Los 3 cerditos");
+        System.out.println(l3.toString());
+    }
+}

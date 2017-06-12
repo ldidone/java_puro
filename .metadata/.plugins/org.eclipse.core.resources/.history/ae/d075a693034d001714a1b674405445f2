@@ -1,0 +1,35 @@
+package com.kaitzen;
+
+public class Libro {
+	private String name;
+	private String editorial;
+	private Ubicacion ubicacion;
+	private String alumno_resp;
+	
+	public Libro() {
+		this.name = "Libro Nuevo";
+		this.editorial = "Editorial";
+		this.alumno_resp = null;
+		this.ubicacion= Ubicacion.BIBLIOTECA;
+	}
+	
+	public Libro(String name, String editorial){
+		this.name = name;
+		this.editorial = editorial;
+		this.alumno_resp = null;
+		this.ubicacion = Ubicacion.BIBLIOTECA;
+	}
+	
+	public void prestamo(){
+		
+	}
+	
+	public void devolucion(){
+		
+	}
+	public String toString(){
+		return "";
+	}
+	
+	
+}

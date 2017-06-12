@@ -1,0 +1,10 @@
+!SESSION 2017-06-09 07:46:30.468 -----------------------------------------------
+eclipse.buildId=M20120914-1800
+java.version=1.8.0_131
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2017-06-09 07:46:35.198
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.

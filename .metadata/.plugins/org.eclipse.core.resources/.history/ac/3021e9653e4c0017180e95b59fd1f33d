@@ -1,0 +1,15 @@
+package com.kaitzen;
+
+public class Libro {
+
+	public void prestamo(){
+		
+	}
+	
+	public void devolucion(){
+		
+	}
+	public String toString(){
+		return "";
+	}
+}
