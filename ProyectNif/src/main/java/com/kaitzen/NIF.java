@@ -1,7 +1,5 @@
 package com.kaitzen;
 
-import java.util.StringTokenizer;
-
 public class NIF {
     private String id;
 
