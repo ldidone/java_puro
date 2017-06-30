@@ -6,7 +6,7 @@ import java.util.Date;
 
 public class Fecha {
     private Date fecha;
-    private DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+    private DateFormat df = new SimpleDateFormat("yyyyy.MMMMM.dd GGG hh:mm aaa");
     Fecha(){
         fecha = new Date();
     }
@@ -46,6 +46,11 @@ public class Fecha {
     }
 
     public String toString() {
-        return String.format("La fecha actual es $s", df.format(fecha));
+    	Calendar cal = Calendar.getInstance();
+        cal.setTime(fecha);
+        cal.add(Calendar.MONTH, 3);
+        return String.format("La fecha actual es %1$s Dia %2$d Mes %3$d Año %4$d",
+        		df.format(cal.getTime()), cal.get(Calendar.DAY_OF_MONTH),
+        		cal.get(Calendar.MONTH), cal.get(Calendar.YEAR));
     }
 }

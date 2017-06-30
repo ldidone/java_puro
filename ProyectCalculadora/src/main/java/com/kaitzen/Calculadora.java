@@ -35,8 +35,8 @@ public class Calculadora {
         return result;
     }
 
-    public Integer dividirCompleto(Integer num1, Integer num2) {
-        Integer result = num1 / num2;
+    public Float dividirCompleto(Integer num1, Integer num2) {
+        Float result = new Float(num1.toString()) / new Float(num2.toString());
         logResultado("división", result);
         return result;
     }
@@ -48,8 +48,8 @@ public class Calculadora {
         return result;
     }
 
-    private void logResultado(String operacion, Integer resultado) {
-        String salida = String.format("El resultado de la %1$s es %2$d", operacion, resultado);
+    private void logResultado(String operacion, Object resultado) {
+        String salida = String.format("El resultado de la %1$s es %2$s", operacion, resultado.toString());
         System.out.println(salida);
     }
 }

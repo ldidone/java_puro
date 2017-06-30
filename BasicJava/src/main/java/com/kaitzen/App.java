@@ -5,6 +5,8 @@ package com.kaitzen;
 import java.util.Arrays;
 import java.util.List;
 
+import com.kaitzen.interfaces.Hombre;
+
 public class App
 {
     public static void main( String[] args )
@@ -109,5 +111,10 @@ public class App
             System.out.println(String.format("%1$s appears: %2$s times",name,Iterables.frequency(names, name)));
         }
         */
+        
+        List<Figura> figs = new List<Figura>();
+        for (Figura fig:figuras) {
+        	
+        }
     }
 }

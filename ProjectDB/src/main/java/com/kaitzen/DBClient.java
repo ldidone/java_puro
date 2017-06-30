@@ -10,19 +10,22 @@ public class DBClient {
     private static final String DB_USER = "sa";
     private static final String DB_PASSWORD = "";
     private static final String CREATE_QUERY = "CREATE TABLE PERSON(id int primary key AUTO_INCREMENT, name varchar(255))";
-    private static final String INSERT_QUERY = "INSERT INTO PERSON (name) values (?)";
-    private static final String SELECT_NAME_QUERY = "select * from PERSON where name = ?";
-    private static final String SELECT_ID_QUERY = "select * from PERSON where id = ?";
-    private static final String SELECT_ALL_QUERY = "select * from PERSON";
+    public static final String INSERT_QUERY = "INSERT INTO PERSON (name) values (?)";
+    public static final String SELECT_NAME_QUERY = "select * from PERSON where name = ?";
+    public static final String SELECT_ID_QUERY = "select * from PERSON where id = ?";
+    public static final String SELECT_ALL_QUERY = "select * from PERSON";
 
     Connection dbConnection = null;
 
-    DBClient() {
-        connect();
-        generateDB();
+    public void init() {
+    	if (dbConnection == null) {
+    		connect();
+    		generateDB();
+    	}
     }
 
     public int insert(String name) throws SQLException {
+    	init();
         PreparedStatement insertPreparedStatement = dbConnection.prepareStatement(INSERT_QUERY);
         insertPreparedStatement.setString(1, name);
         insertPreparedStatement.executeUpdate();
@@ -36,13 +39,15 @@ public class DBClient {
     }
 
     public Person select(int id) throws SQLException {
-        PreparedStatement selectPreparedStatement = dbConnection.prepareStatement(SELECT_ID_QUERY);
+    	init();
+    	PreparedStatement selectPreparedStatement = dbConnection.prepareStatement(SELECT_ID_QUERY);
         selectPreparedStatement.setInt(1,id);
         return select(selectPreparedStatement);
     }
 
     public Person select(String name) throws SQLException{
-        PreparedStatement selectPreparedStatement = dbConnection.prepareStatement(SELECT_NAME_QUERY);
+    	init();
+    	PreparedStatement selectPreparedStatement = dbConnection.prepareStatement(SELECT_NAME_QUERY);
         selectPreparedStatement.setString(1,name);
         return select(selectPreparedStatement);
     }
@@ -59,7 +64,8 @@ public class DBClient {
     }
 
     public List<Person> select() throws SQLException{
-        List<Person> crowd = new ArrayList<Person>();
+    	init();
+    	List<Person> crowd = new ArrayList<Person>();
         PreparedStatement selectPreparedStatement = dbConnection.prepareStatement(SELECT_ALL_QUERY);
         ResultSet rs = selectPreparedStatement.executeQuery();
         while (rs.next()) {

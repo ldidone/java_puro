@@ -12,6 +12,7 @@ public class App
         System.out.println( " --------------------------------------------------------" );
 
         DBClient client = new DBClient();
+        client.init();
         int userId = 0;
 
         try {
