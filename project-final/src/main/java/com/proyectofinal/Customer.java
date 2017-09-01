@@ -1,4 +1,5 @@
 package com.proyectofinal;
+import java.sql.ResultSet;
 import java.util.Date;
 import java.util.List;
 
@@ -65,8 +66,9 @@ public class Customer
 		return this;
 	}
 	
-	public List<Customer> search(String attribute,String value)
+	public List<Customer> search(DBClient client, String attribute,String value)
 	{
+		//ResultSet result = client.select("CUSTOMER",attribute, value);
 		return null;
 	}
 
